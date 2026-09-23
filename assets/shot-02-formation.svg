@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="游戏截图：洞窟中的蛊阵与五只灵蛊">
+  <defs>
+    <radialGradient id="s2cave" cx=".5" cy=".45" r=".75">
+      <stop offset="0" stop-color="#123040"/>
+      <stop offset=".55" stop-color="#0a1a24"/>
+      <stop offset="1" stop-color="#04090d"/>
+    </radialGradient>
+    <linearGradient id="s2stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a161d"/>
+      <stop offset="1" stop-color="#050a0e"/>
+    </linearGradient>
+    <linearGradient id="s2beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fe6ff" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#8fe6ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="s2glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="s2soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#s2cave)"/>
+
+  <!-- 洞顶钟乳 -->
+  <path d="M0 0 H 1280 V 120 L 1180 190 L 1090 96 L 980 210 L 890 110 L 780 200 L 690 88 L 580 176 L 470 92 L 360 186 L 250 104 L 150 200 L 60 120 L 0 176 Z" fill="#050b10"/>
+  <path d="M0 720 H 1280 V 606 L 1160 556 L 1040 620 L 900 540 L 760 616 L 620 548 L 480 628 L 350 552 L 210 620 L 80 560 L 0 610 Z" fill="url(#s2stone)"/>
+
+  <!-- 光柱 -->
+  <g opacity=".85">
+    <path d="M592 0 L 700 0 L 780 720 L 512 720 Z" fill="url(#s2beam)"/>
+    <path d="M618 0 L 660 0 L 700 720 L 578 720 Z" fill="url(#s2beam)" opacity=".8"/>
+  </g>
+
+  <!-- 蛊阵 -->
+  <g transform="translate(640 470)">
+    <ellipse rx="430" ry="170" fill="#0b2531" opacity=".55"/>
+    <ellipse rx="430" ry="170" fill="none" stroke="#6fd8ff" stroke-opacity=".55" stroke-width="2"/>
+    <ellipse rx="330" ry="130" fill="none" stroke="#6fd8ff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="14 10"/>
+    <ellipse rx="236" ry="94" fill="none" stroke="#9fe9ff" stroke-opacity=".6" stroke-width="2"/>
+    <ellipse rx="150" ry="60" fill="none" stroke="#9fe9ff" stroke-opacity=".5" stroke-width="2"/>
+    <!-- 阵内符文 -->
+    <g stroke="#bff1ff" stroke-opacity=".72" stroke-width="2.4" fill="none">
+      <path d="M-330 0 L 330 0 M 0 -130 L 0 130"/>
+      <path d="M-236 -78 L 236 78 M -236 78 L 236 -78"/>
+      <path d="M-206 -82 L 0 -40 L 206 -82"/>
+      <path d="M-206 82 L 0 40 L 206 82"/>
+      <circle cx="-150" cy="0" r="14"/>
+      <circle cx="150" cy="0" r="14"/>
+    </g>
+    <g fill="none" stroke="#8fe6ff" stroke-opacity=".6" stroke-width="2">
+      <circle cx="0" cy="0" r="58"/>
+      <circle cx="0" cy="0" r="40" stroke-dasharray="8 6"/>
+    </g>
+    <ellipse rx="430" ry="170" fill="#6fd8ff" opacity=".12" filter="url(#s2glow)"/>
+  </g>
+
+  <!-- 五只灵蛊 -->
+  <g>
+    <g transform="translate(320 420) scale(1.05)">
+      <ellipse cx="0" cy="0" rx="26" ry="15" fill="#0e2632" stroke="#8fe6ff" stroke-opacity=".7"/>
+      <ellipse cx="-6" cy="-1" rx="10" ry="7" fill="#9fe9ff" opacity=".85"/>
+      <path d="M22 -6 L 40 -16 M 22 4 L 40 12" stroke="#8fe6ff" stroke-opacity=".7" stroke-width="2"/>
+      <ellipse rx="34" ry="22" fill="#6fd8ff" opacity=".2" filter="url(#s2soft)"/>
+    </g>
+    <g transform="translate(960 402) scale(1.05)">
+      <ellipse cx="0" cy="0" rx="26" ry="15" fill="#2a1030" stroke="#e0a6ff" stroke-opacity=".7"/>
+      <ellipse cx="-6" cy="-1" rx="10" ry="7" fill="#e9c8ff" opacity=".85"/>
+      <path d="M22 -6 L 40 -16 M 22 4 L 40 12" stroke="#e0a6ff" stroke-opacity=".7" stroke-width="2"/>
+      <ellipse rx="34" ry="22" fill="#c07cff" opacity=".2" filter="url(#s2soft)"/>
+    </g>
+    <g transform="translate(640 250) scale(1.15)">
+      <ellipse cx="0" cy="0" rx="26" ry="15" fill="#101c34" stroke="#7fb8ff" stroke-opacity=".75"/>
+      <ellipse cx="-6" cy="-1" rx="10" ry="7" fill="#cfe6ff" opacity=".9"/>
+      <path d="M22 -6 L 40 -16 M 22 4 L 40 12" stroke="#7fb8ff" stroke-opacity=".7" stroke-width="2"/>
+      <ellipse rx="34" ry="22" fill="#5f9dff" opacity=".22" filter="url(#s2soft)"/>
+    </g>
+    <g transform="translate(420 596) scale(.95)">
+      <ellipse cx="0" cy="0" rx="26" ry="15" fill="#2a1a10" stroke="#ffc46f" stroke-opacity=".75"/>
+      <ellipse cx="-6" cy="-1" rx="10" ry="7" fill="#ffe1ad" opacity=".9"/>
+      <path d="M22 -6 L 40 -16 M 22 4 L 40 12" stroke="#ffc46f" stroke-opacity=".7" stroke-width="2"/>
+      <ellipse rx="34" ry="22" fill="#ffb04d" opacity=".2" filter="url(#s2soft)"/>
+    </g>
+    <g transform="translate(880 588) scale(.95)">
+      <ellipse cx="0" cy="0" rx="26" ry="15" fill="#2a1016" stroke="#ff8a9a" stroke-opacity=".75"/>
+      <ellipse cx="-6" cy="-1" rx="10" ry="7" fill="#ffd0d6" opacity=".9"/>
+      <path d="M22 -6 L 40 -16 M 22 4 L 40 12" stroke="#ff8a9a" stroke-opacity=".7" stroke-width="2"/>
+      <ellipse rx="34" ry="22" fill="#ff5f7a" opacity=".2" filter="url(#s2soft)"/>
+    </g>
+  </g>
+
+  <!-- 悬空符箓 -->
+  <g fill="#dff6ff" opacity=".9" filter="url(#s2soft)">
+    <rect x="236" y="176" width="34" height="120" rx="3" transform="rotate(-8 253 236)"/>
+    <rect x="1010" y="150" width="34" height="120" rx="3" transform="rotate(7 1027 210)"/>
+  </g>
+  <g fill="#0b2531" opacity=".75" font-family="STKaiti, KaiTi, serif" font-size="26">
+    <text x="240" y="216" transform="rotate(-8 253 236)">蛊</text>
+    <text x="1014" y="190" transform="rotate(7 1027 210)">阵</text>
+  </g>
+
+  <!-- 尘埃 -->
+  <g fill="#cdefff">
+    <circle cx="180" cy="300" r="1.8" opacity=".55"/>
+    <circle cx="380" cy="180" r="1.4" opacity=".45"/>
+    <circle cx="760" cy="620" r="1.6" opacity=".4"/>
+    <circle cx="1080" cy="520" r="1.5" opacity=".45"/>
+    <circle cx="880" cy="300" r="1.3" opacity=".4"/>
+    <circle cx="540" cy="640" r="1.7" opacity=".4"/>
+  </g>
+
+  <!-- HUD -->
+  <g opacity=".92">
+    <rect x="36" y="626" width="360" height="64" rx="8" fill="#04090e" fill-opacity=".72" stroke="#6fd8ff" stroke-opacity=".32"/>
+    <g font-family="Segoe UI, Arial, sans-serif" fill="#cdefff">
+      <text x="56" y="654" font-size="13" opacity=".7">炼蛊 进度</text>
+      <text x="56" y="676" font-size="15">五转 · 天蛊阵</text>
+    </g>
+    <rect x="246" y="644" width="132" height="10" rx="5" fill="#0d2634"/>
+    <rect x="246" y="644" width="96" height="10" rx="5" fill="#5fd0ff"/>
+    <rect x="246" y="662" width="132" height="10" rx="5" fill="#0d2634"/>
+    <rect x="246" y="662" width="58" height="10" rx="5" fill="#8fe6ff" opacity=".8"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#cdefff" opacity=".8">
+    <text x="892" y="86">洞天 · 蛊阵核心</text>
+  </g>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="游戏截图：雷云天劫之下孤身迎劫">
+  <defs>
+    <linearGradient id="s6sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05070e"/>
+      <stop offset=".45" stop-color="#101a2c"/>
+      <stop offset=".8" stop-color="#2a1020"/>
+      <stop offset="1" stop-color="#0a0610"/>
+    </linearGradient>
+    <radialGradient id="s6bolt" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#dff6ff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#7fb8ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="s6peak" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#151020"/>
+      <stop offset="1" stop-color="#05040a"/>
+    </linearGradient>
+    <filter id="s6blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="s6soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#s6sky)"/>
+
+  <!-- 雷云 -->
+  <g fill="#161c2c" opacity=".9">
+    <ellipse cx="300" cy="120" rx="380" ry="130"/>
+    <ellipse cx="760" cy="96" rx="420" ry="140"/>
+    <ellipse cx="1120" cy="140" rx="330" ry="120"/>
+    <ellipse cx="560" cy="196" rx="460" ry="110"/>
+  </g>
+  <g fill="#0b1020" opacity=".8">
+    <ellipse cx="460" cy="200" rx="420" ry="96"/>
+    <ellipse cx="940" cy="210" rx="380" ry="86"/>
+  </g>
+  <ellipse cx="640" cy="330" rx="240" ry="180" fill="#3a2a5c" opacity=".35" filter="url(#s6blur)"/>
+
+  <!-- 雷光 -->
+  <g stroke="#dff6ff" stroke-opacity=".92" fill="none" stroke-width="4" stroke-linecap="round">
+    <path d="M700 150 L 664 226 L 706 236 L 640 340 L 676 348 L 596 470"/>
+    <path d="M520 176 L 500 236 L 528 244 L 470 340"/>
+    <path d="M900 168 L 876 236 L 908 244 L 840 356"/>
+  </g>
+  <g stroke="#9fe9ff" stroke-opacity=".45" fill="none" stroke-width="2">
+    <path d="M700 150 L 686 200 L 716 210 L 654 320"/>
+    <path d="M1060 200 L 1030 268 L 1062 278 L 1000 380"/>
+  </g>
+  <ellipse cx="640" cy="300" rx="300" ry="200" fill="url(#s6bolt)" opacity=".45"/>
+
+  <!-- 山峰 -->
+  <path d="M0 560 L 160 470 L 300 540 L 420 430 L 560 520 L 700 400 L 840 510 L 980 420 L 1120 520 L 1280 440 L 1280 720 L 0 720 Z" fill="url(#s6peak)"/>
+  <path d="M0 640 L 200 580 L 400 620 L 620 560 L 840 620 L 1060 566 L 1280 610 L 1280 720 L 0 720 Z" fill="#030206"/>
+
+  <!-- 迎劫人形 -->
+  <g transform="translate(700 470)">
+    <ellipse cx="0" cy="80" rx="84" ry="16" fill="#000" opacity=".6"/>
+    <path d="M-26 -86 C -12 -94 12 -94 26 -86 C 42 -70 50 -26 46 18 C 40 56 18 76 0 76 C -18 76 -40 56 -46 18 C -50 -26 -42 -70 -26 -86 Z" fill="#0a0812"/>
+    <path d="M26 -86 C 42 -70 50 -26 46 18 C 40 56 18 76 0 76 L 0 -92 C 10 -92 20 -90 26 -86 Z" fill="#ff6a3d" opacity=".35"/>
+    <circle cx="0" cy="-104" r="17" fill="#0a0812"/>
+    <path d="M-20 -108 C -8 -130 12 -132 20 -110 C 14 -116 0 -118 -20 -108 Z" fill="#0a0812"/>
+    <circle cx="0" cy="-104" r="17" fill="none" stroke="#ff8a5a" stroke-opacity=".5"/>
+    <path d="M0 -140 L 0 -176" stroke="#dff6ff" stroke-opacity=".5" stroke-width="3"/>
+  </g>
+
+  <!-- 旋风花瓣 -->
+  <g fill="#ff7a45" opacity=".75">
+    <ellipse cx="600" cy="430" rx="9" ry="4.4" transform="rotate(-30 600 430)"/>
+    <ellipse cx="790" cy="360" rx="8" ry="4" transform="rotate(26 790 360)"/>
+    <ellipse cx="660" cy="330" rx="7" ry="3.4" transform="rotate(-8 660 330)"/>
+    <ellipse cx="560" cy="520" rx="7" ry="3.4" transform="rotate(48 560 520)"/>
+    <ellipse cx="880" cy="470" rx="6.5" ry="3.2" transform="rotate(-44 880 470)"/>
+  </g>
+
+  <!-- 雨丝 -->
+  <g stroke="#bcd8ff" stroke-opacity=".22" stroke-width="2">
+    <path d="M120 240 L 60 420 M240 200 L 180 400 M360 260 L 300 460 M1000 230 L 940 430 M1140 280 L 1080 470 M1240 200 L 1180 400"/>
+  </g>
+
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#cdefff" opacity=".9">
+    <text x="60" y="80">天劫 · 第九重</text>
+    <text x="60" y="106" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#7fb8d6">剩余波次 3 / 9</text>
+  </g>
+  <g>
+    <rect x="60" y="122" width="300" height="10" rx="5" fill="#122736"/>
+    <rect x="60" y="122" width="100" height="10" rx="5" fill="#8fd8ff"/>
+  </g>
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#ffd9c0" opacity=".92">
+    <text x="640" y="660" text-anchor="middle">「此劫既至，红莲为证。」</text>
+  </g>
+</svg>

@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>红莲魔尊 on Steam 风格商店页面 · 蛊真人同人企划</title>
+<meta name="description" content="《蛊真人》同人企划：以红莲魔尊为主角的黑暗修仙概念商店页面，Steam 风格布局 —— 蛊虫体系、五域地图、修为面板、天劫与客户评测。">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="红莲魔尊 · 同人概念商店页面">
+<meta property="og:description" content="九转魔道，以莲为蛊。蛊真人同人企划，Steam 风格页面。">
+<meta property="og:image" content="assets/capsule-main.svg">
+</head>
+<body id="top">
+
+<!-- ===== 图标 sprite（内联，避免外部引用） ===== -->
+<svg class="icon-sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="icRed" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#7d0f1c"/>
+      <stop offset=".6" stop-color="#e0332c"/>
+      <stop offset="1" stop-color="#ffb37a"/>
+    </linearGradient>
+    <linearGradient id="icGold" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#7a5510"/>
+      <stop offset=".55" stop-color="#d8a83a"/>
+      <stop offset="1" stop-color="#ffe6ab"/>
+    </linearGradient>
+    <linearGradient id="icBlue" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#1d4a63"/>
+      <stop offset=".6" stop-color="#4aa3d8"/>
+      <stop offset="1" stop-color="#bfe9ff"/>
+    </linearGradient>
+  </defs>
+
+  <symbol id="ico-search" viewBox="0 0 24 24">
+    <circle cx="10.5" cy="10.5" r="6.4" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M15.4 15.4 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ico-cart" viewBox="0 0 24 24">
+    <path d="M2 3h3l2.4 11.3A2 2 0 0 0 9.4 16h8.6a2 2 0 0 0 1.96-1.6L21.5 7H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.6" fill="currentColor"/>
+    <circle cx="17.6" cy="20" r="1.6" fill="currentColor"/>
+  </symbol>
+  <symbol id="ico-heart" viewBox="0 0 24 24">
+    <path d="M12 20.4C10.4 19.3 3.6 14.8 3.6 9.9A4.5 4.5 0 0 1 12 7.3a4.5 4.5 0 0 1 8.4 2.6c0 4.9-6.8 9.4-8.4 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-flag" viewBox="0 0 24 24">
+    <path d="M5.5 21V3.4m0 0h11.2l-2.1 4.2 2.1 4.2H5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-expand" viewBox="0 0 24 24">
+    <path d="M4 9.5V4h5.5M20 14.5V20h-5.5M20 9.5V4h-5.5M4 14.5V20h5.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-left" viewBox="0 0 24 24">
+    <path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-right" viewBox="0 0 24 24">
+    <path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-up" viewBox="0 0 24 24">
+    <path d="M7 20V11l5-7 4 2-1.4 5H19a1.6 1.6 0 0 1 1.6 2L19.6 19a2 2 0 0 1-2 1.4H7zm0-9H4v9h3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-down" viewBox="0 0 24 24">
+    <path d="M17 4v9l-5 7-4-2 1.4-5H5a1.6 1.6 0 0 1-1.6-2L4.4 5A2 2 0 0 1 6.4 3.6H17zm0 9h3V4h-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-check" viewBox="0 0 24 24">
+    <path d="m4.5 12.5 5 5L19.5 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-plus" viewBox="0 0 24 24">
+    <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ico-play" viewBox="0 0 24 24">
+    <path d="M7 4.6 19 12 7 19.4z" fill="currentColor"/>
+  </symbol>
+  <symbol id="ico-close" viewBox="0 0 24 24">
+    <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ico-warn" viewBox="0 0 24 24">
+    <path d="M12 3.6 21.4 20H2.6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+    <path d="M12 9.6v4.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    <circle cx="12" cy="17.1" r="1.1" fill="currentColor"/>
+  </symbol>
+
+  <!-- 成就图标 -->
+  <symbol id="ach-seed" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="6" fill="#101b26"/>
+    <circle cx="32" cy="32" r="15" fill="none" stroke="url(#icGold)" stroke-width="2" stroke-dasharray="6 4"/>
+    <circle cx="32" cy="32" r="9" fill="url(#icGold)" opacity=".28"/>
+    <circle cx="32" cy="32" r="4.4" fill="#ffeab8"/>
+  </symbol>
+  <symbol id="ach-lotus" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="6" fill="#1a0810"/>
+    <g transform="translate(32 44)" fill="url(#icRed)">
+      <path d="M0 0C6-4 9-14 3-25 1.4-28-1.4-28-3-25-9-14-6-4 0 0Z" transform="rotate(-58)"/>
+      <path d="M0 0C6-4 9-14 3-25 1.4-28-1.4-28-3-25-9-14-6-4 0 0Z" transform="rotate(58)"/>
+      <path d="M0 0C7-5 10-16 3.4-28 1.6-31.6-1.6-31.6-3.4-28-10-16-7-5 0 0Z" transform="rotate(-28)"/>
+      <path d="M0 0C7-5 10-16 3.4-28 1.6-31.6-1.6-31.6-3.4-28-10-16-7-5 0 0Z" transform="rotate(28)"/>
+      <path d="M0 0C8-6 11-18 4-31 2-35-2-35-4-31-11-18-8-6 0 0Z"/>
+    </g>
+    <circle cx="32" cy="42" r="3.4" fill="#ffe0ab"/>
+  </symbol>
+  <symbol id="ach-map" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="6" fill="#0b1a20"/>
+    <path d="M8 44l10-12 8 8 10-14 10 12 8-6v16H8z" fill="#1d4352"/>
+    <path d="M8 50h48" stroke="#7fd6e0" stroke-opacity=".5" stroke-width="2"/>
+    <circle cx="30" cy="30" r="4" fill="url(#icRed)"/>
+    <circle cx="30" cy="30" r="8" fill="none" stroke="#ff7a45" stroke-opacity=".5" stroke-width="1.4"/>
+  </symbol>
+  <symbol id="ach-thunder" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="6" fill="#0b1220"/>
+    <path d="M36 6 18 34h12l-4 24 20-30H33z" fill="url(#icBlue)"/>
+    <path d="M12 16h10M42 50h10M10 46h8" stroke="#9fd8ff" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ach-crown" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="6" fill="#1b0a12"/>
+    <path d="M12 46 9 22l11 8 12-16 12 16 11-8-3 24z" fill="url(#icRed)"/>
+    <path d="M12 50h40" stroke="#ffb37a" stroke-opacity=".6" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="32" cy="30" r="2.6" fill="#ffeecb"/>
+  </symbol>
+  <symbol id="ach-longevity" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="6" fill="#101820"/>
+    <circle cx="32" cy="32" r="18" fill="none" stroke="url(#icGold)" stroke-width="2"/>
+    <circle cx="32" cy="32" r="11" fill="none" stroke="#ffe6ab" stroke-opacity=".45" stroke-width="1.4"/>
+    <path d="M32 14v4M32 46v4M14 32h4M46 32h4" stroke="#ffe6ab" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M32 22v12l8 6" fill="none" stroke="#fff3d4" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<a class="skip-link" href="#main">跳到主要商品内容</a>
+
+<!-- ===== 全局导航（Steam 深色顶栏） ===== -->
+<header class="global-header">
+  <div class="gh-inner">
+    <a class="gh-brand" href="#top" aria-label="红莲魔尊 商店首页">
+      <img src="assets/mark.svg" alt="" width="34" height="34">
+      <span class="gh-brand-text">红莲魔尊</span>
+    </a>
+    <nav class="gh-nav" aria-label="全局导航">
+      <a class="is-active" href="#top">商店</a>
+      <a href="#about">库</a>
+      <a href="#reviews">社区</a>
+      <a href="#tags">关于</a>
+      <a href="#support">支持</a>
+    </nav>
+    <form class="gh-search" role="search" data-search-form>
+      <input type="search" name="q" placeholder="搜索蛊虫、域界或同人企划" aria-label="搜索" autocomplete="off">
+      <button type="submit" aria-label="搜索">
+        <svg class="ico" width="16" height="16" aria-hidden="true"><use href="#ico-search"></use></svg>
+      </button>
+    </form>
+    <div class="gh-user">
+      <a class="gh-link" href="#requirements">安装客户端</a>
+      <span class="gh-divider" aria-hidden="true"></span>
+      <span class="gh-account">未登录 · 同人访客</span>
+      <button class="gh-ghost" type="button" data-login>登录</button>
+      <button class="gh-lang" type="button" data-lang>简体中文 <span aria-hidden="true">▾</span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 面包屑栏 ===== -->
+<nav class="crumb-bar" aria-label="面包屑">
+  <div class="crumb-inner">
+    <ol class="crumbs">
+      <li><a href="#top">全部游戏</a></li>
+      <li><a href="#about">角色扮演</a></li>
+      <li><a href="#reviews">蛊真人系列</a></li>
+      <li class="crumbs-current" aria-current="page">红莲魔尊</li>
+    </ol>
+    <div class="crumb-also">
+      <span class="crumb-also-label">相关：</span>
+      <a href="#achievements">成就</a>
+      <a href="#languages">语言</a>
+      <a href="#reviews">评测</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ===== 首页头图 ===== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-media">
+      <img src="assets/hero-banner.svg" alt="夜色中绽放的巨大红莲，悬崖上独立的人影" width="1920" height="620">
+    </div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">《蛊真人》同人企划 · 概念商店页面</p>
+      <h1 id="hero-title">红莲魔尊</h1>
+      <p class="hero-sub">九转魔道，以莲为蛊。<br>于五域之间燃尽自身道痕，只求一线长生。</p>
+      <ul class="hero-genres">
+        <li>修仙</li>
+        <li>黑暗奇幻</li>
+        <li>开放世界</li>
+        <li>剧情丰富</li>
+      </ul>
+      <div class="hero-actions">
+        <button class="btn btn-blue" type="button" data-wishlist>
+          <svg class="ico" width="16" height="16" aria-hidden="true"><use href="#ico-heart"></use></svg>
+          <span data-wishlist-label>加入愿望单</span>
+        </button>
+        <button class="btn btn-dark" type="button" data-trailer>
+          <svg class="ico" width="14" height="14" aria-hidden="true"><use href="#ico-play"></use></svg>
+          观看预告片
+        </button>
+        <button class="btn btn-dark" type="button" data-follow>关注</button>
+      </div>
+      <dl class="hero-meta">
+        <div><dt>开发者</dt><dd>南疆蛊阁（同人）</dd></div>
+        <div><dt>发行商</dt><dd>红莲同人企划</dd></div>
+        <div><dt>发售日</dt><dd>2026 年 10 月 31 日</dd></div>
+      </dl>
+    </div>
+    <p class="hero-notice">
+      <svg class="ico" width="15" height="15" aria-hidden="true"><use href="#ico-warn"></use></svg>
+      同人作品声明：本页为《蛊真人》世界观下的同人概念页面，非官方作品；页面内的数值、评测、成就与系统需求均为同人演绎，与原著作者及任何官方机构无关。
+    </p>
+  </section>
+
+  <div class="layout">
+
+    <!-- ===== 主列 ===== -->
+    <div class="col-main">
+
+      <!-- 媒体轮播 -->
+      <section class="media" aria-label="游戏画面">
+        <div class="media-stage" data-viewer>
+          <img class="media-img" data-viewer-img src="assets/shot-01-lotus-fire.svg" alt="红莲花海与荒原战场" width="1280" height="720">
+          <span class="media-badge" data-viewer-badge>1 / 6</span>
+          <button class="media-nav media-prev" type="button" data-prev aria-label="上一张截图">
+            <svg class="ico" width="22" height="22" aria-hidden="true"><use href="#ico-left"></use></svg>
+          </button>
+          <button class="media-nav media-next" type="button" data-next aria-label="下一张截图">
+            <svg class="ico" width="22" height="22" aria-hidden="true"><use href="#ico-right"></use></svg>
+          </button>
+          <button class="media-full" type="button" data-expand aria-label="全屏查看截图">
+            <svg class="ico" width="16" height="16" aria-hidden="true"><use href="#ico-expand"></use></svg>
+            全屏
+          </button>
+        </div>
+        <p class="media-caption" data-viewer-caption>红莲花海 · 焚天战场</p>
+        <ul class="thumbs" data-thumbs>
+          <li>
+            <button type="button" class="thumb is-active" data-index="0"
+              data-full="assets/shot-01-lotus-fire.svg"
+              data-caption="红莲花海 · 焚天战场">
+              <img src="assets/shot-01-lotus-fire.svg" alt="红莲花海与荒原战场" width="1280" height="720">
+              <span class="thumb-label">红莲花海</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="thumb" data-index="1"
+              data-full="assets/shot-02-formation.svg"
+              data-caption="洞窟蛊阵 · 五灵共鸣">
+              <img src="assets/shot-02-formation.svg" alt="洞窟中的蛊阵与灵蛊" width="1280" height="720">
+              <span class="thumb-label">洞窟蛊阵</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="thumb" data-index="2"
+              data-full="assets/shot-03-fivedomains.svg"
+              data-caption="五域地图 · 红莲标记">
+              <img src="assets/shot-03-fivedomains.svg" alt="五域世界地图与红莲标记" width="1280" height="720">
+              <span class="thumb-label">五域地图</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="thumb" data-index="3"
+              data-full="assets/shot-04-duel.svg"
+              data-caption="荒原对决 · 两位强者">
+              <img src="assets/shot-04-duel.svg" alt="两位强者在荒原上的对决" width="1280" height="720">
+              <span class="thumb-label">荒原对决</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="thumb" data-index="4"
+              data-full="assets/shot-05-panel.svg"
+              data-caption="角色面板 · 修为与功德">
+              <img src="assets/shot-05-panel.svg" alt="角色境界与蛊虫面板界面" width="1280" height="720">
+              <span class="thumb-label">修为面板</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="thumb" data-index="5"
+              data-full="assets/shot-06-tribulation.svg"
+              data-caption="雷云天劫 · 孤身迎劫">
+              <img src="assets/shot-06-tribulation.svg" alt="雷云天劫之下孤身迎劫" width="1280" height="720">
+              <span class="thumb-label">天劫</span>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 关于这款游戏 -->
+      <section class="about" id="about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title">关于这款游戏</h2>
+        <div class="about-text">
+          <p>
+            在《蛊真人》的世界里，蛊是生命的根系，也是所有因果的起点。本企划把「红莲魔尊」这样一位魔道至尊的一生，
+            拆成一套可以亲手操作的修行循环：<strong>养蛊、炼蛊、布阵、争夺、渡劫</strong>。你不是天命所归的主角，
+            而是一位从一转入道、必须自己走出九转的老魔。
+          </p>
+          <p>
+            红莲蛊是九转本命蛊，也是整部作品最锋利的一把双刃刀。它允许你以自身道痕为薪，换一次无可挽回的爆发；
+            燃得越狠，功德与道痕掉得越快。于是每一场战斗都变成一次取舍：<em>这一击，到底值不值得拿命去换？</em>
+          </p>
+          <p>
+            五域各自有一套气运、门派与禁忌，世界不会围着玩家转。你可以在中州的集市里做个安分的蛊商，
+            也可以在北原把别人的道痕拆下来装进自己的蛊虫里。所有的选择都会写进因果账本，直到天劫落到你头上那一天。
+          </p>
+        </div>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img src="assets/shot-01-lotus-fire.svg" alt="燃烧的红莲花海与荒原战场" width="1280" height="720" loading="lazy">
+          </div>
+          <div class="feature-body">
+            <h3>本命红莲蛊 · 以道痕为薪</h3>
+            <p>
+              红莲蛊不提供稳定的增益，它提供的是一次「不合常理」的机会：无视境界差距的爆发、短时间内的蛊术连发、
+              以及从绝境里换出一条命。代价同样明确 —— 每动用一次，就永久燃损一层功德与道痕，面板上的数字只降不升。
+            </p>
+            <p>把红莲用在什么地方，几乎等于决定这个角色最后能不能走到九转。</p>
+          </div>
+        </article>
+
+        <article class="feature feature-reverse">
+          <div class="feature-media">
+            <img src="assets/shot-02-formation.svg" alt="洞窟中的蛊阵与五只灵蛊" width="1280" height="720" loading="lazy">
+          </div>
+          <div class="feature-body">
+            <h3>一转至九转 · 蛊虫即人生</h3>
+            <p>
+              图鉴收录三百余种蛊虫，从最低阶的疗伤蛊，到能撼动一域气运的九转蛊。蛊虫可以吞噬、可以融合，
+              也可以作为祭品喂养别的蛊 —— 蛊吃蛊，人吃人，这是这个世界最基础的规则。
+            </p>
+            <p>洞窟蛊阵是修行与生产的中枢：把蛊虫按方位摆进阵眼，让它们自己产生共鸣，产出你真正需要的东西。</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img src="assets/shot-03-fivedomains.svg" alt="五域世界地图与红莲标记" width="1280" height="720" loading="lazy">
+          </div>
+          <div class="feature-body">
+            <h3>五域天地 · 中州、北原、南疆、西漠、东海</h3>
+            <p>
+              每一域都有独立的势力关系、气运走向与禁忌。同为九转，在中州是被人供奉的尊者，
+              到了北原可能就是一块人人想啃的肥肉。地图不是景点清单，而是一张会随你行动而改变态度的棋盘。
+            </p>
+            <p>红莲标记是你留下的因果：走到哪里，哪里就会有人为你的选择付出代价。</p>
+          </div>
+        </article>
+
+        <article class="feature feature-reverse">
+          <div class="feature-media">
+            <img src="assets/shot-04-duel.svg" alt="两位强者在荒原上的对决" width="1280" height="720" loading="lazy">
+          </div>
+          <div class="feature-body">
+            <h3>一念定生死 · 回合制对决</h3>
+            <p>
+              战斗是信息战。对手的蛊虫配置、残余蛊力、道痕强弱都摆在明面上，胜利往往取决于你在第几回合动手、
+              以及愿不愿意提前支付代价。没有血条拉锯，只有一次算错的死。
+            </p>
+            <p>战败不会读档重来，只会让你失去一部分道痕 —— 这很残忍，但很蛊真人。</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-media">
+            <img src="assets/shot-05-panel.svg" alt="角色境界与蛊虫面板界面" width="1280" height="720" loading="lazy">
+          </div>
+          <div class="feature-body">
+            <h3>修为 · 功德 · 道痕</h3>
+            <p>
+              面板上的六项数值彼此牵制：魔道修为决定上限，肉身强度决定存活，神魂之力决定蛊术强度，
+              气运决定你在街上遇到的是贵人还是劫难，功德则决定红莲蛊每次开火要烧掉多少东西。
+            </p>
+            <p>养成没有唯一最优解，只有你打算拿什么换什么。</p>
+          </div>
+        </article>
+
+        <article class="feature feature-reverse">
+          <div class="feature-media">
+            <img src="assets/shot-06-tribulation.svg" alt="雷云天劫之下孤身迎劫" width="1280" height="720" loading="lazy">
+          </div>
+          <div class="feature-body">
+            <h3>天劫临身 · 九转之上的最后一道门</h3>
+            <p>
+              修为到顶并不等于胜利，天劫才是终点线。劫雷会按你此前积累的功德与杀孽结算强度：
+              一路烧功德换命的老魔，往往要在最后面对一场格外难看的雷。
+            </p>
+            <p>渡劫失败，道痕尽散。渡劫成功，你才有资格谈长生。</p>
+          </div>
+        </article>
+
+        <div class="features-list">
+          <h3>本作特色</h3>
+          <ul>
+            <li>单人剧情约 60 小时，三条结局线：魔道、隐世、以及不太像好人的「正道」。</li>
+            <li>三百余种蛊虫，可自由搭配蛊阵与共鸣组合。</li>
+            <li>因果与气运系统：每一次取舍都会改变后续事件与人际关系。</li>
+            <li>新游戏+ 继承道痕与图鉴，重走一遭会有完全不同的劫数。</li>
+            <li>无内购、无联网要求，同人企划永久免费（如果你愿意，可以给作者递一株红莲）。</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 数据占位锚点，供分段续写 -->
+      <span id="anchor-1" hidden></span>
+    </div>
+
+    <!-- ===== 侧栏 ===== -->
+    <aside class="col-side" aria-label="购买与信息">
+      <a class="sidebar-capsule" href="assets/capsule-main.svg" target="_blank" rel="noopener">
+        <img src="assets/capsule-main.svg" alt="红莲魔尊 封面图" width="616" height="353">
+        <span class="capsule-zoom">查看大图</span>
+      </a>
+
+      <p class="side-blurb">
+        《蛊真人》同人企划。以九转魔道之身养一株红莲本命蛊，在五域废墟之间争夺道痕、气运与那一线长生。
+      </p>
+
+      <div class="side-block">
+        <h2 class="side-title">全部评测</h2>
+        <p class="review-verdict">
+          <a href="#reviews" class="review-verdict-label">特别好评</a>
+        </p>
+        <p class="side-muted">12,483 篇评测中 96% 为好评</p>
+        <div class="histogram" role="img" aria-label="好评 96%，差评 4%">
+          <span class="histogram-pos" style="width:96%"></span>
+          <span class="histogram-neg" style="width:4%"></span>
+        </div>
+        <p class="side-mini">最近 30 天：2,140 篇中的 97% 为好评（好评如潮）</p>
+      </div>
+
+      <div class="side-block">
+        <h2 class="side-title">发售信息</h2>
+        <dl class="side-rows">
+          <div><dt>发售日期</dt><dd>2026 年 10 月 31 日</dd></div>
+          <div><dt>开发者</dt><dd><a href="#about">南疆蛊阁</a></dd></div>
+          <div><dt>发行商</dt><dd><a href="#about">红莲同人企划</a></dd></div>
+          <div><dt>系列</dt><dd><a href="#about">蛊真人系列</a></dd></div>
+        </dl>
+      </div>
+
+      <div class="side-block" id="tags">
+        <h2 class="side-title">热门用户标签</h2>
+        <ul class="tag-list">
+          <li><a href="#reviews">修仙</a></li>
+          <li><a href="#reviews">黑暗奇幻</a></li>
+          <li><a href="#reviews">剧情丰富</a></li>
+          <li><a href="#reviews">开放世界</a></li>
+          <li><a href="#reviews">回合制战斗</a></li>
+          <li><a href="#reviews">蛊虫收集</a></li>
+          <li><a href="#reviews">中国神话</a></li>
+          <li><a href="#reviews">单机</a></li>
+          <li><a href="#reviews">高难度</a></li>
+          <li><a href="#reviews">选择导向</a></li>
+        </ul>
+        <button class="tag-add" type="button" data-tag-add>
+          <svg class="ico" width="14" height="14" aria-hidden="true"><use href="#ico-plus"></use></svg>
+          添加你自己的标签
+        </button>
+      </div>
+
+      <div class="buy-box">
+        <p class="buy-price">
+          <span class="price-original">¥ 178</span>
+          <span class="price-now">¥ 128</span>
+          <span class="price-discount">-28%</span>
+        </p>
+        <button class="btn btn-green btn-block" type="button" data-add-cart>
+          <svg class="ico" width="17" height="17" aria-hidden="true"><use href="#ico-cart"></use></svg>
+          添加至购物车
+        </button>
+        <button class="btn btn-blue btn-block" type="button" data-wishlist>
+          <svg class="ico" width="15" height="15" aria-hidden="true"><use href="#ico-heart"></use></svg>
+          <span data-wishlist-label>添加至愿望单</span>
+        </button>
+        <button class="buy-ignore" type="button" data-ignore>
+          <svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-flag"></use></svg>
+          忽略
+        </button>
+        <p class="buy-note">同人企划虚拟定价，仅用于还原商店页面版式，不产生任何真实交易。</p>
+      </div>
+
+      <div class="side-block">
+        <h2 class="side-title">包含内容</h2>
+        <ul class="feature-icons">
+          <li>单人</li>
+          <li>成就系统</li>
+          <li>云存档</li>
+          <li>家庭共享</li>
+        </ul>
+      </div>
+
+      <div class="side-block" id="languages">
+        <h2 class="side-title">语言支持</h2>
+        <table class="lang-mini">
+          <thead>
+            <tr><th scope="col">语言</th><th scope="col">界面</th><th scope="col">字幕</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">简体中文</th><td><svg class="ico tick" width="14" height="14" role="img" aria-label="支持"><use href="#ico-check"></use></svg></td><td><svg class="ico tick" width="14" height="14" role="img" aria-label="支持"><use href="#ico-check"></use></svg></td></tr>
+            <tr><th scope="row">繁体中文</th><td><svg class="ico tick" width="14" height="14" role="img" aria-label="支持"><use href="#ico-check"></use></svg></td><td><svg class="ico tick" width="14" height="14" role="img" aria-label="支持"><use href="#ico-check"></use></svg></td></tr>
+            <tr><th scope="row">English</th><td><svg class="ico tick" width="14" height="14" role="img" aria-label="支持"><use href="#ico-check"></use></svg></td><td><svg class="ico tick" width="14" height="14" role="img" aria-label="支持"><use href="#ico-check"></use></svg></td></tr>
+            <tr><th scope="row">日本語</th><td>—</td><td><svg class="ico tick" width="14" height="14" role="img" aria-label="支持"><use href="#ico-check"></use></svg></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===== 系统需求 ===== -->
+  <section class="panel-section" id="requirements" aria-labelledby="req-title">
+    <div class="container">
+      <h2 class="section-title" id="req-title">系统需求</h2>
+      <div class="req-grid">
+        <div class="req-card">
+          <h3>最低配置</h3>
+          <dl class="req-rows">
+            <div><dt>操作系统</dt><dd>Windows 10 64 位</dd></div>
+            <div><dt>处理器</dt><dd>Intel Core i5-8400 / AMD Ryzen 5 2600</dd></div>
+            <div><dt>内存</dt><dd>8 GB RAM</dd></div>
+            <div><dt>显卡</dt><dd>NVIDIA GTX 1060 6GB / AMD RX 580</dd></div>
+            <div><dt>DirectX 版本</dt><dd>11</dd></div>
+            <div><dt>存储空间</dt><dd>需要 45 GB 可用空间</dd></div>
+            <div><dt>附注</dt><dd>需额外预留 60 GB 用于蛊虫图鉴缓存；集显设备建议降低「莲火」特效等级。</dd></div>
+          </dl>
+        </div>
+        <div class="req-card">
+          <h3>推荐配置</h3>
+          <dl class="req-rows">
+            <div><dt>操作系统</dt><dd>Windows 11 64 位</dd></div>
+            <div><dt>处理器</dt><dd>Intel Core i7-12700 / AMD Ryzen 7 5800X</dd></div>
+            <div><dt>内存</dt><dd>16 GB RAM</dd></div>
+            <div><dt>显卡</dt><dd>NVIDIA RTX 3070 / AMD RX 6800</dd></div>
+            <div><dt>DirectX 版本</dt><dd>12</dd></div>
+            <div><dt>存储空间</dt><dd>需要 70 GB 可用空间（SSD）</dd></div>
+            <div><dt>附注</dt><dd>4K 分辨率与「天劫」特效建议使用 NVMe SSD；开启光追建议 RTX 4070 以上。</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="section-note">以上配置为同人演绎内容，仅用于还原 Steam 商店页版式。</p>
+    </div>
+  </section>
+
+  <!-- ===== 成就 ===== -->
+  <section class="panel-section panel-alt" id="achievements" aria-labelledby="ach-title">
+    <div class="container">
+      <h2 class="section-title" id="ach-title">成就</h2>
+      <p class="section-lead">共 6 项成就，0.9% 的玩家集齐了全部道痕。</p>
+      <ul class="achievements">
+        <li class="achievement">
+          <svg class="ach-icon" width="64" height="64" aria-hidden="true"><use href="#ach-seed"></use></svg>
+          <div class="ach-body">
+            <h3>一转入道</h3>
+            <p>炼成自己的第一只本命蛊。</p>
+            <p class="ach-rate">全球 82.4% 的玩家拥有此成就</p>
+          </div>
+        </li>
+        <li class="achievement">
+          <svg class="ach-icon" width="64" height="64" aria-hidden="true"><use href="#ach-lotus"></use></svg>
+          <div class="ach-body">
+            <h3>红莲初绽</h3>
+            <p>第一次动用红莲蛊，燃损一层功德。</p>
+            <p class="ach-rate">全球 41.7% 的玩家拥有此成就</p>
+          </div>
+        </li>
+        <li class="achievement">
+          <svg class="ach-icon" width="64" height="64" aria-hidden="true"><use href="#ach-map"></use></svg>
+          <div class="ach-body">
+            <h3>五域踏遍</h3>
+            <p>解锁中州、北原、南疆、西漠与东海全部地图。</p>
+            <p class="ach-rate">全球 18.3% 的玩家拥有此成就</p>
+          </div>
+        </li>
+        <li class="achievement">
+          <svg class="ach-icon" width="64" height="64" aria-hidden="true"><use href="#ach-thunder"></use></svg>
+          <div class="ach-body">
+            <h3>引劫渡雷</h3>
+            <p>首次渡劫成功，从雷云里活着走出来。</p>
+            <p class="ach-rate">全球 12.6% 的玩家拥有此成就</p>
+          </div>
+        </li>
+        <li class="achievement">
+          <svg class="ach-icon" width="64" height="64" aria-hidden="true"><use href="#ach-crown"></use></svg>
+          <div class="ach-body">
+            <h3>魔道至尊</h3>
+            <p>修为突破九转，被五域同时记恨。</p>
+            <p class="ach-rate">全球 3.1% 的玩家拥有此成就</p>
+          </div>
+        </li>
+        <li class="achievement achievement-hidden">
+          <svg class="ach-icon" width="64" height="64" aria-hidden="true"><use href="#ach-longevity"></use></svg>
+          <div class="ach-body">
+            <h3>一线长生</h3>
+            <p>在不燃尽全部功德的前提下达成真结局。</p>
+            <p class="ach-rate">全球 0.9% 的玩家拥有此成就</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 客户评测 ===== -->
+  <section class="panel-section" id="reviews" aria-labelledby="rev-title">
+    <div class="container">
+      <h2 class="section-title" id="rev-title">客户评测</h2>
+
+      <div class="review-summary">
+        <div class="review-total">
+          <p class="review-total-label">全部评测</p>
+          <p class="review-verdict-label big">特别好评</p>
+          <p class="side-muted">12,483 篇评测中 96% 为好评</p>
+          <p class="side-mini">最近 30 天：2,140 篇中的 97% 为好评（好评如潮）</p>
+        </div>
+        <div class="review-bars" role="img" aria-label="好评 96%，差评 4%">
+          <div class="bar-row">
+            <span class="bar-label">好评</span>
+            <span class="bar-track"><span class="bar-fill bar-pos" style="width:96%"></span></span>
+            <span class="bar-value">96%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">差评</span>
+            <span class="bar-track"><span class="bar-fill bar-neg" style="width:4%"></span></span>
+            <span class="bar-value">4%</span>
+          </div>
+          <p class="side-mini">其中 1,204 篇评测被标记为「有帮助」</p>
+        </div>
+      </div>
+
+      <div class="review-toolbar">
+        <div class="review-filters" role="group" aria-label="筛选评测">
+          <button type="button" class="chip is-active" data-filter="all">全部 <span data-count="all">6</span></button>
+          <button type="button" class="chip" data-filter="yes">好评 <span data-count="yes">5</span></button>
+          <button type="button" class="chip" data-filter="no">差评 <span data-count="no">1</span></button>
+        </div>
+        <p class="review-sort">按最有帮助排序</p>
+      </div>
+
+      <ul class="review-list" data-review-list>
+        <li class="review" data-recommend="yes">
+          <img class="review-avatar" src="assets/avatar-3.svg" alt="" width="64" height="64">
+          <div class="review-main">
+            <header class="review-head">
+              <a class="review-author" href="#reviews">青茅山种田人</a>
+              <span class="review-badge badge-yes">
+                <svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg>
+                推荐
+              </span>
+              <span class="review-meta">评测时间：2026 年 8 月 14 日 · 游玩 312.6 小时</span>
+            </header>
+            <p class="review-text">
+              玩到第九转才发现，这游戏真正的难度不是战斗，是忍住不去拿别人的道痕。
+              前二十小时你以为自己在修仙，后面才发现是在记账 —— 每一笔都记得清清楚楚，天劫的时候一起算。
+            </p>
+            <footer class="review-foot">
+              <span class="review-help">这篇评测是否有帮助？</span>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg> 有帮助 <span>1,204</span></button>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-down"></use></svg> 没帮助 <span>38</span></button>
+            </footer>
+          </div>
+        </li>
+
+        <li class="review" data-recommend="yes">
+          <img class="review-avatar" src="assets/avatar-2.svg" alt="" width="64" height="64">
+          <div class="review-main">
+            <header class="review-head">
+              <a class="review-author" href="#reviews">南疆蛊师</a>
+              <span class="review-badge badge-yes">
+                <svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg>
+                推荐
+              </span>
+              <span class="review-meta">评测时间：2026 年 8 月 2 日 · 游玩 128.4 小时</span>
+            </header>
+            <p class="review-text">
+              红莲蛊的代价设计太狠了。每次开大之前都要先烧自己的功德，那种「用命换输出」的手感，
+              在别的修仙游戏里我没见过第二个。第一次为了赢一场不该赢的架烧掉三层功德，回头看了半小时面板。
+            </p>
+            <footer class="review-foot">
+              <span class="review-help">这篇评测是否有帮助？</span>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg> 有帮助 <span>862</span></button>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-down"></use></svg> 没帮助 <span>21</span></button>
+            </footer>
+          </div>
+        </li>
+
+        <li class="review" data-recommend="no">
+          <img class="review-avatar" src="assets/avatar-4.svg" alt="" width="64" height="64">
+          <div class="review-main">
+            <header class="review-head">
+              <a class="review-author" href="#reviews">中州盐商</a>
+              <span class="review-badge badge-no">
+                <svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-down"></use></svg>
+                不推荐
+              </span>
+              <span class="review-meta">评测时间：2026 年 7 月 26 日 · 游玩 22.1 小时</span>
+            </header>
+            <p class="review-text">
+              氛围、剧情、美术都是顶尖，但新手引导几乎没有。前两个小时我完全不知道该去哪、该养哪只蛊，
+              死了三次才明白「道痕」不是经验值。没读过原著的人会一头雾水，这点必须扣分。
+            </p>
+            <footer class="review-foot">
+              <span class="review-help">这篇评测是否有帮助？</span>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg> 有帮助 <span>447</span></button>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-down"></use></svg> 没帮助 <span>210</span></button>
+            </footer>
+          </div>
+        </li>
+
+        <li class="review" data-recommend="yes">
+          <img class="review-avatar" src="assets/avatar-1.svg" alt="" width="64" height="64">
+          <div class="review-main">
+            <header class="review-head">
+              <a class="review-author" href="#reviews">北原放马客</a>
+              <span class="review-badge badge-yes">
+                <svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg>
+                推荐
+              </span>
+              <span class="review-meta">评测时间：2026 年 7 月 19 日 · 游玩 74.9 小时</span>
+            </header>
+            <p class="review-text">
+              五域地图做得很克制，没有满地图的问号。中州那段集市剧情我反复读了三遍，NPC 的每句话都像在算计你 ——
+              因为他们确实在算计你。喜欢慢节奏、愿意读字的人会很满足。
+            </p>
+            <footer class="review-foot">
+              <span class="review-help">这篇评测是否有帮助？</span>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg> 有帮助 <span>618</span></button>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-down"></use></svg> 没帮助 <span>17</span></button>
+            </footer>
+          </div>
+        </li>
+
+        <li class="review" data-recommend="yes">
+          <img class="review-avatar" src="assets/avatar-1.svg" alt="" width="64" height="64">
+          <div class="review-main">
+            <header class="review-head">
+              <a class="review-author" href="#reviews">东海钓叟</a>
+              <span class="review-badge badge-yes">
+                <svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg>
+                推荐
+              </span>
+              <span class="review-meta">评测时间：2026 年 7 月 8 日 · 游玩 51.3 小时</span>
+            </header>
+            <p class="review-text">
+              音乐满分。渡劫那一场的鼓点配雷声，我戴着耳机手的抖了。唯一的问题是打完那一场之后，
+              我盯着结局字幕坐了十分钟，不太想开新档。
+            </p>
+            <footer class="review-foot">
+              <span class="review-help">这篇评测是否有帮助？</span>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg> 有帮助 <span>512</span></button>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-down"></use></svg> 没帮助 <span>9</span></button>
+            </footer>
+          </div>
+        </li>
+
+        <li class="review" data-recommend="yes">
+          <img class="review-avatar" src="assets/avatar-2.svg" alt="" width="64" height="64">
+          <div class="review-main">
+            <header class="review-head">
+              <a class="review-author" href="#reviews">魔道老怪</a>
+              <span class="review-badge badge-yes">
+                <svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg>
+                推荐
+              </span>
+              <span class="review-meta">评测时间：2026 年 6 月 30 日 · 游玩 963.2 小时</span>
+            </header>
+            <p class="review-text">别问，问就是道痕不够。第九遍了，这次不烧功德。</p>
+            <footer class="review-foot">
+              <span class="review-help">这篇评测是否有帮助？</span>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-up"></use></svg> 有帮助 <span>2,871</span></button>
+              <button type="button" class="help-btn" data-help><svg class="ico" width="13" height="13" aria-hidden="true"><use href="#ico-down"></use></svg> 没帮助 <span>64</span></button>
+            </footer>
+          </div>
+        </li>
+      </ul>
+      <p class="review-empty" data-review-empty hidden>当前筛选下没有评测。</p>
+    </div>
+  </section>
+
+  <!-- ===== 同人声明 / 支持 ===== -->
+  <section class="panel-section panel-alt" id="support" aria-labelledby="fan-title">
+    <div class="container prose">
+      <h2 class="section-title" id="fan-title">关于这个同人企划</h2>
+      <p>
+        这是一个纯前端静态页面，用来把「如果《蛊真人》的角色开一家 Steam 商店页会长什么样」这件事做出来。
+        页面没有后端、没有追踪脚本、不联网，所有插画与界面元素都是手写的 SVG 与 CSS。
+      </p>
+      <p>
+        《蛊真人》及其角色版权归原作者与相关权利方所有；本页面为同人演绎，不含官方素材，
+        也不代表任何官方立场。页面中的价格、评测、成就、系统需求均为虚构，仅为还原版式。
+      </p>
+      <p><a href="#top">回到页面顶部</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="global-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/mark.svg" alt="" width="32" height="32">
+      <div>
+        <p class="footer-name">红莲魔尊 · 同人概念页面</p>
+        <p class="footer-sub">九转魔道，以莲为蛊。</p>
+      </div>
+    </div>
+    <nav class="footer-cols" aria-label="页脚导航">
+      <div>
+        <h2>关于</h2>
+        <ul>
+          <li><a href="#about">关于这款游戏</a></li>
+          <li><a href="#achievements">成就</a></li>
+          <li><a href="#languages">语言支持</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>支持</h2>
+        <ul>
+          <li><a href="#requirements">系统需求</a></li>
+          <li><a href="#support">同人声明</a></li>
+          <li><a href="#top">回到顶部</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>社区</h2>
+        <ul>
+          <li><a href="#reviews">客户评测</a></li>
+          <li><a href="#tags">热门标签</a></li>
+          <li><a href="#reviews">讨论区</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 红莲同人企划。页面为《蛊真人》同人创作，与原著作者及任何官方无关。</p>
+      <p>版式致敬 Steam，非 Valve 官方页面，无任何真实交易行为。</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 购物车弹层 ===== -->
+<div class="modal" data-modal hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <header class="modal-head">
+      <h2 id="cart-title">已添加至购物车</h2>
+      <button type="button" class="modal-close" data-modal-close aria-label="关闭">
+        <svg class="ico" width="18" height="18" aria-hidden="true"><use href="#ico-close"></use></svg>
+      </button>
+    </header>
+    <div class="cart-item">
+      <img src="assets/capsule-main.svg" alt="红莲魔尊 封面图" width="616" height="353">
+      <div>
+        <p class="cart-name">红莲魔尊</p>
+        <p class="cart-meta">同人企划 · 2026 年 10 月 31 日发售 · 单人 / 成就系统</p>
+        <p class="cart-price"><span class="price-original">¥ 178</span> <span class="price-now">¥ 128</span></p>
+      </div>
+    </div>
+    <p class="modal-note">这是一张同人页面的演示弹层，不会产生任何真实订单，也不会向任何服务器发送数据。</p>
+    <div class="modal-actions">
+      <button class="btn btn-green" type="button" data-modal-close>继续浏览</button>
+      <button class="btn btn-dark" type="button" data-cart-view>查看购物车（同人演示）</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 提示条 ===== -->
+<p class="toast" data-toast role="status" aria-live="polite" hidden></p>
+
+<!-- ===== 全屏图片查看器 ===== -->
+<div class="lightbox" data-lightbox hidden>
+  <button class="lightbox-close" type="button" data-lightbox-close aria-label="关闭全屏查看">
+    <svg class="ico" width="22" height="22" aria-hidden="true"><use href="#ico-close"></use></svg>
+  </button>
+  <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="上一张">
+    <svg class="ico" width="30" height="30" aria-hidden="true"><use href="#ico-left"></use></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img data-lightbox-img src="assets/shot-01-lotus-fire.svg" alt="红莲花海与荒原战场">
+    <figcaption data-lightbox-caption>红莲花海 · 焚天战场</figcaption>
+  </figure>
+  <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="下一张">
+    <svg class="ico" width="30" height="30" aria-hidden="true"><use href="#ico-right"></use></svg>
+  </button>
+</div>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

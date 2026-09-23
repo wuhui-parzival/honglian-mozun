@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="游戏截图：两位强者在荒原上的对决">
+  <defs>
+    <linearGradient id="s4sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#06070f"/>
+      <stop offset=".55" stop-color="#141126"/>
+      <stop offset="1" stop-color="#2a1120"/>
+    </linearGradient>
+    <radialGradient id="s4left" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ff9a5a" stop-opacity=".8"/>
+      <stop offset=".5" stop-color="#e1372a" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#8c1220" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="s4right" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#bff1ff" stop-opacity=".8"/>
+      <stop offset=".5" stop-color="#4fa8e0" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#1a4a6b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="s4ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b1420"/>
+      <stop offset="1" stop-color="#05040a"/>
+    </linearGradient>
+    <filter id="s4blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="s4soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#s4sky)"/>
+  <ellipse cx="420" cy="430" rx="360" ry="280" fill="url(#s4left)"/>
+  <ellipse cx="880" cy="430" rx="360" ry="280" fill="url(#s4right)"/>
+
+  <!-- 远山 -->
+  <path d="M0 470 L 130 416 L 240 462 L 360 400 L 470 456 L 600 406 L 720 458 L 850 402 L 970 456 L 1100 408 L 1280 462 L 1280 720 L 0 720 Z" fill="#0d0a16"/>
+  <rect y="520" width="1280" height="200" fill="url(#s4ground)"/>
+
+  <!-- 冲击波纹 -->
+  <g fill="none" stroke-opacity=".55">
+    <circle cx="640" cy="430" r="80" stroke="#ffd7a0" stroke-width="3"/>
+    <circle cx="640" cy="430" r="140" stroke="#ffb27a" stroke-width="2"/>
+    <circle cx="640" cy="430" r="210" stroke="#8fd8ff" stroke-width="2" stroke-dasharray="12 10"/>
+    <circle cx="640" cy="430" r="300" stroke="#7fb8ff" stroke-width="1.5" stroke-dasharray="6 12"/>
+  </g>
+  <circle cx="640" cy="430" r="120" fill="#fff0d0" opacity=".18" filter="url(#s4blur)"/>
+
+  <!-- 地面裂缝 -->
+  <g stroke="#ff7a45" stroke-opacity=".45" stroke-width="2.5" fill="none">
+    <path d="M640 500 L 520 600 L 420 660 L 300 700"/>
+    <path d="M640 500 L 760 596 L 880 652 L 1000 700"/>
+    <path d="M640 500 L 640 620 L 660 720"/>
+  </g>
+
+  <!-- 左：红莲一侧 -->
+  <g transform="translate(392 520)">
+    <ellipse cx="0" cy="120" rx="120" ry="22" fill="#000" opacity=".5"/>
+    <path d="M-56 -140 C -26 -154 26 -154 56 -140 C 84 -110 98 -40 88 32 C 78 104 40 140 0 140 C -40 140 -78 104 -88 32 C -98 -40 -84 -110 -56 -140 Z" fill="#1c0509"/>
+    <path d="M56 -140 C 84 -110 98 -40 88 32 C 78 104 40 140 0 140 L 0 -150 C 22 -150 44 -146 56 -140 Z" fill="#ff6a3d" opacity=".3"/>
+    <circle cx="0" cy="-168" r="34" fill="#160408"/>
+    <path d="M-40 -176 C -18 -222 24 -224 42 -180 C 30 -190 2 -194 -40 -176 Z" fill="#160408"/>
+    <circle cx="0" cy="-168" r="34" fill="none" stroke="#ff8a5a" stroke-opacity=".5"/>
+    <!-- 手中莲 -->
+    <g transform="translate(74 -66) scale(.5)">
+      <g fill="#ff7a45">
+        <path d="M0 0 C 8 -6 12 -18 3 -32 C 1 -36 -1 -36 -3 -32 C -12 -18 -8 -6 0 0 Z" transform="rotate(-60)"/>
+        <path d="M0 0 C 8 -6 12 -18 3 -32 C 1 -36 -1 -36 -3 -32 C -12 -18 -8 -6 0 0 Z" transform="rotate(60)"/>
+        <path d="M0 0 C 9 -7 13 -20 3 -36 C 1 -40 -1 -40 -3 -36 C -13 -20 -9 -7 0 0 Z"/>
+      </g>
+      <circle r="4.5" fill="#ffe0ab"/>
+    </g>
+  </g>
+
+  <!-- 右：对手 -->
+  <g transform="translate(888 520)">
+    <ellipse cx="0" cy="120" rx="120" ry="22" fill="#000" opacity=".5"/>
+    <path d="M-52 -134 C -24 -148 24 -148 52 -134 C 80 -106 92 -38 84 30 C 74 100 38 138 0 138 C -38 138 -74 100 -84 30 C -92 -38 -80 -106 -52 -134 Z" fill="#0b1420"/>
+    <path d="M52 -134 C 80 -106 92 -38 84 30 C 74 100 38 138 0 138 L 0 -144 C 20 -144 40 -140 52 -134 Z" fill="#7fd8ff" opacity=".3"/>
+    <circle cx="0" cy="-162" r="32" fill="#0a1220"/>
+    <path d="M-38 -170 C -16 -212 22 -214 40 -174 C 28 -184 2 -188 -38 -170 Z" fill="#0a1220"/>
+    <circle cx="0" cy="-162" r="32" fill="none" stroke="#9fe9ff" stroke-opacity=".5"/>
+    <path d="M-104 -40 L 104 -120" stroke="#8fd8ff" stroke-opacity=".6" stroke-width="4"/>
+  </g>
+
+  <!-- 能量交汇 -->
+  <g fill="none" stroke-width="3">
+    <path d="M470 456 C 560 428 600 440 640 432" stroke="#ff9a5a" stroke-opacity=".8"/>
+    <path d="M812 452 C 726 428 686 440 640 432" stroke="#9fe9ff" stroke-opacity=".8"/>
+  </g>
+
+  <!-- 飞散花瓣与冰晶 -->
+  <g fill="#ff7a45" opacity=".7">
+    <ellipse cx="520" cy="360" rx="8" ry="4" transform="rotate(-24 520 360)"/>
+    <ellipse cx="472" cy="300" rx="6" ry="3" transform="rotate(18 472 300)"/>
+    <ellipse cx="560" cy="266" rx="7" ry="3.4" transform="rotate(40 560 266)"/>
+  </g>
+  <g fill="#bff1ff" opacity=".7">
+    <path d="M800 320 l 6 12 l -12 0 Z"/>
+    <path d="M860 268 l 5 10 l -10 0 Z"/>
+    <path d="M752 260 l 4 9 l -8 0 Z"/>
+  </g>
+
+  <!-- HUD -->
+  <g opacity=".92">
+    <rect x="60" y="44" width="460" height="26" rx="6" fill="#1a0509" fill-opacity=".8"/>
+    <rect x="60" y="44" width="356" height="26" rx="6" fill="#e1372a"/>
+    <text x="76" y="63" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#ffe6d5">红莲魔尊 · 第九转</text>
+  </g>
+  <g opacity=".92">
+    <rect x="760" y="44" width="460" height="26" rx="6" fill="#0a1420" fill-opacity=".8"/>
+    <rect x="864" y="44" width="356" height="26" rx="6" fill="#4fa8e0"/>
+    <text x="776" y="63" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#dcf1ff">宿敌 · 正道仙尊</text>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#ffe0ab" opacity=".9">
+    <text x="576" y="392">大魔道 · 天一莲</text>
+  </g>
+</svg>

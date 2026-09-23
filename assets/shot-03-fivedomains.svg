@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="游戏截图：五域世界地图与红莲标记">
+  <defs>
+    <radialGradient id="s3bg" cx=".5" cy=".5" r=".72">
+      <stop offset="0" stop-color="#12212e"/>
+      <stop offset=".7" stop-color="#0a141d"/>
+      <stop offset="1" stop-color="#050a0f"/>
+    </radialGradient>
+    <linearGradient id="s3land" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2c4256"/>
+      <stop offset="1" stop-color="#16232f"/>
+    </linearGradient>
+    <linearGradient id="s3land2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a3126"/>
+      <stop offset="1" stop-color="#1d1811"/>
+    </linearGradient>
+    <filter id="s3glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#s3bg)"/>
+
+  <!-- 经纬网格 -->
+  <g stroke="#4d7d9c" stroke-opacity=".18" stroke-width="1">
+    <path d="M0 120 H 1280 M0 240 H 1280 M0 360 H 1280 M0 480 H 1280 M0 600 H 1280"/>
+    <path d="M160 0 V 720 M320 0 V 720 M480 0 V 720 M640 0 V 720 M800 0 V 720 M960 0 V 720 M1120 0 V 720"/>
+  </g>
+
+  <!-- 五域 -->
+  <g>
+    <!-- 中州 -->
+    <path d="M520 300 C 560 258 640 246 700 268 C 760 290 792 336 780 384 C 766 436 700 470 632 462 C 566 454 508 414 504 366 C 502 342 508 318 520 300 Z" fill="url(#s3land)" stroke="#6fd8ff" stroke-opacity=".5"/>
+    <!-- 北原 -->
+    <path d="M520 128 C 566 96 660 88 720 108 C 780 128 792 168 750 190 C 690 220 586 220 540 196 C 508 180 496 148 520 128 Z" fill="url(#s3land)" stroke="#9fe9ff" stroke-opacity=".4"/>
+    <!-- 南疆 -->
+    <path d="M544 520 C 590 490 686 486 744 508 C 800 528 802 566 756 588 C 700 614 594 610 552 586 C 520 568 516 538 544 520 Z" fill="url(#s3land2)" stroke="#ffc46f" stroke-opacity=".45"/>
+    <!-- 西漠 -->
+    <path d="M212 336 C 258 306 336 306 372 334 C 406 360 392 404 342 424 C 288 446 214 440 192 410 C 178 390 186 356 212 336 Z" fill="url(#s3land2)" stroke="#ffb04d" stroke-opacity=".4"/>
+    <!-- 东海 -->
+    <path d="M922 300 C 972 274 1052 278 1088 306 C 1122 332 1104 376 1054 396 C 1000 418 928 410 906 380 C 892 360 898 320 922 300 Z" fill="url(#s3land)" stroke="#6fd8ff" stroke-opacity=".45"/>
+  </g>
+
+  <!-- 区域标签 -->
+  <g font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="26" fill="#d8ecfa" text-anchor="middle" opacity=".92">
+    <text x="642" y="386">中 州</text>
+    <text x="648" y="164">北 原</text>
+    <text x="648" y="558">南 疆</text>
+    <text x="282" y="384">西 漠</text>
+    <text x="996" y="356">东 海</text>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#7fb8d6" text-anchor="middle" opacity=".8">
+    <text x="642" y="410">中央沃土 · 魔道祖地</text>
+    <text x="648" y="188">风雪冰原</text>
+    <text x="648" y="582">十万大山</text>
+    <text x="282" y="408">黄沙古道</text>
+    <text x="996" y="380">群岛海域</text>
+  </g>
+
+  <!-- 红莲标记 -->
+  <g transform="translate(700 322)">
+    <circle r="46" fill="#ff5f3a" opacity=".22" filter="url(#s3glow)"/>
+    <circle r="26" fill="none" stroke="#ff8a5a" stroke-opacity=".85" stroke-width="2"/>
+    <circle r="34" fill="none" stroke="#ff5f3a" stroke-opacity=".5" stroke-dasharray="6 6"/>
+    <g transform="translate(0 12) scale(.62)">
+      <g fill="#ff7a45">
+        <path d="M0 0 C 8 -6 12 -18 3 -32 C 1 -36 -1 -36 -3 -32 C -12 -18 -8 -6 0 0 Z" transform="rotate(-58)"/>
+        <path d="M0 0 C 8 -6 12 -18 3 -32 C 1 -36 -1 -36 -3 -32 C -12 -18 -8 -6 0 0 Z" transform="rotate(58)"/>
+        <path d="M0 0 C 9 -7 13 -20 3 -36 C 1 -40 -1 -40 -3 -36 C -13 -20 -9 -7 0 0 Z"/>
+      </g>
+      <circle r="4" fill="#ffe0ab"/>
+    </g>
+  </g>
+
+  <!-- 路径 -->
+  <path d="M282 380 C 400 400 470 390 560 372" fill="none" stroke="#ffc46f" stroke-opacity=".55" stroke-width="2" stroke-dasharray="9 8"/>
+  <path d="M700 340 C 760 300 860 320 940 348" fill="none" stroke="#6fd8ff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="9 8"/>
+  <path d="M642 430 C 622 470 626 500 640 524" fill="none" stroke="#ffc46f" stroke-opacity=".4" stroke-width="2" stroke-dasharray="9 8"/>
+
+  <!-- 面板 -->
+  <g opacity=".94">
+    <rect x="60" y="52" width="290" height="86" rx="8" fill="#08131b" fill-opacity=".78" stroke="#4d7d9c" stroke-opacity=".45"/>
+    <text x="82" y="86" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#cdefff">五域 · 魔道形势图</text>
+    <text x="82" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#7fb8d6">已探明区域 3 / 5　气运 62%</text>
+    <rect x="82" y="120" width="240" height="6" rx="3" fill="#122736"/>
+    <rect x="82" y="120" width="150" height="6" rx="3" fill="#5fd0ff"/>
+  </g>
+  <g opacity=".94">
+    <rect x="948" y="560" width="272" height="112" rx="8" fill="#08131b" fill-opacity=".78" stroke="#ff7a45" stroke-opacity=".4"/>
+    <text x="972" y="594" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#ffd9c0">红莲魔尊 · 遗迹</text>
+    <text x="972" y="620" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#c9a08d">中州 · 赤莲渊　危险度 ★★★★★</text>
+    <text x="972" y="644" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#c9a08d">尚未开启 · 需九转境界</text>
+    <text x="972" y="664" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#ffb27a">追踪中</text>
+  </g>
+</svg>

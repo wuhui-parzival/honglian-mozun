@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 616 353" width="616" height="353" role="img" aria-label="暗夜中绽放的巨大红莲，与悬崖上独立的人影">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#08030a"/>
+      <stop offset=".42" stop-color="#25081a"/>
+      <stop offset=".72" stop-color="#3d0a14"/>
+      <stop offset="1" stop-color="#0a0407"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffd7a0" stop-opacity=".95"/>
+      <stop offset=".25" stop-color="#ff8a3d" stop-opacity=".7"/>
+      <stop offset=".6" stop-color="#c81f2b" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#5c0a12" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="petalOut" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#3d0510"/>
+      <stop offset=".45" stop-color="#a81223"/>
+      <stop offset="1" stop-color="#ff7a45"/>
+    </linearGradient>
+    <linearGradient id="petalIn" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#6b0a16"/>
+      <stop offset=".5" stop-color="#e0332c"/>
+      <stop offset="1" stop-color="#ffc98a"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff6a3d" stop-opacity=".9"/>
+      <stop offset=".6" stop-color="#8d1023" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx=".46" cy=".48" r=".72">
+      <stop offset=".45" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity=".85"/>
+    </radialGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6a3d" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#ff8a5a" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blurBig" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="blurSoft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <g id="petalShape">
+      <path d="M0 0 C 33 -24 45 -72 12 -132 C 4 -146 -4 -146 -12 -132 C -45 -72 -33 -24 0 0 Z"/>
+    </g>
+  </defs>
+
+  <rect width="616" height="353" fill="url(#sky)"/>
+
+  <!-- 远山 -->
+  <path d="M0 268 L 70 226 L 138 258 L 196 214 L 262 258 L 330 222 L 402 262 L 470 224 L 540 258 L 616 232 L 616 353 L 0 353 Z" fill="#1a0510" opacity=".86"/>
+  <path d="M0 300 L 92 266 L 176 296 L 258 268 L 352 300 L 448 270 L 542 300 L 616 282 L 616 353 L 0 353 Z" fill="#0d0309"/>
+
+  <!-- 光柱 -->
+  <g opacity=".3" filter="url(#blurSoft)">
+    <path d="M296 30 L 356 30 L 470 353 L 250 353 Z" fill="#ff7a45" opacity=".16"/>
+    <path d="M340 10 L 372 10 L 430 353 L 320 353 Z" fill="#ffd7a0" opacity=".12"/>
+  </g>
+
+  <!-- 红莲 -->
+  <g transform="translate(404 196)">
+    <circle r="150" fill="url(#coreGlow)"/>
+    <g filter="url(#blurBig)" opacity=".75">
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(-84) scale(.92)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(84) scale(.92)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(-58) scale(1.02)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(58) scale(1.02)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(-30) scale(1.1)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(30) scale(1.1)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="scale(1.16)"/>
+    </g>
+    <g opacity=".95">
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(-86) scale(.84)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(86) scale(.84)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(-62) scale(.94)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(62) scale(.94)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(-34) scale(1.02)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="rotate(34) scale(1.02)"/>
+      <use href="#petalShape" fill="url(#petalOut)" transform="scale(1.08)"/>
+    </g>
+    <g opacity=".92">
+      <use href="#petalShape" fill="url(#petalIn)" transform="rotate(-70) scale(.5)"/>
+      <use href="#petalShape" fill="url(#petalIn)" transform="rotate(70) scale(.5)"/>
+      <use href="#petalShape" fill="url(#petalIn)" transform="rotate(-44) scale(.56)"/>
+      <use href="#petalShape" fill="url(#petalIn)" transform="rotate(44) scale(.56)"/>
+      <use href="#petalShape" fill="url(#petalIn)" transform="rotate(-18) scale(.6)"/>
+      <use href="#petalShape" fill="url(#petalIn)" transform="rotate(18) scale(.6)"/>
+      <use href="#petalShape" fill="url(#petalIn)" transform="scale(.62)"/>
+    </g>
+    <g opacity=".95">
+      <use href="#petalShape" fill="#ffe3b0" transform="rotate(-28) scale(.22)"/>
+      <use href="#petalShape" fill="#ffe3b0" transform="rotate(28) scale(.22)"/>
+      <use href="#petalShape" fill="#fff3d4" transform="scale(.24)"/>
+    </g>
+    <ellipse rx="26" ry="18" fill="#ffeecb" opacity=".35" filter="url(#blurSoft)"/>
+    <circle r="16" fill="#fff0cf" opacity=".9"/>
+    <circle r="9" fill="#ffb35c"/>
+    <g fill="#ffe7bd" opacity=".5">
+      <circle cx="0" cy="10" r="1.6"/>
+      <circle cx="8" cy="6" r="1.3"/>
+      <circle cx="-8" cy="6" r="1.3"/>
+    </g>
+  </g>
+
+  <!-- 飘散花瓣 -->
+  <g fill="#ff5f3a" opacity=".55">
+    <ellipse cx="508" cy="112" rx="7" ry="3.4" transform="rotate(-28 508 112)"/>
+    <ellipse cx="356" cy="86" rx="6" ry="3" transform="rotate(22 356 86)"/>
+    <ellipse cx="548" cy="188" rx="5.4" ry="2.6" transform="rotate(52 548 188)"/>
+    <ellipse cx="286" cy="140" rx="5" ry="2.4" transform="rotate(14 286 140)"/>
+  </g>
+
+  <!-- 悬崖人形 -->
+  <g transform="translate(132 306)">
+    <path d="M-58 22 C -30 -6 30 -6 58 22 L 74 47 L -74 47 Z" fill="#0a0207"/>
+    <g fill="#12030a">
+      <path d="M0 -104 C 16 -100 22 -84 20 -66 C 34 -54 40 -30 34 -8 C 30 8 12 16 0 16 C -12 16 -30 8 -34 -8 C -40 -30 -34 -54 -20 -66 C -22 -84 -16 -100 0 -104 Z"/>
+      <path d="M-20 -66 C -46 -52 -58 -20 -62 6 C -46 -14 -34 -30 -26 -46 Z"/>
+      <path d="M-4 -100 C 10 -112 26 -114 40 -106 C 26 -102 14 -96 6 -86 Z"/>
+    </g>
+    <path d="M20 -66 C 34 -54 40 -30 34 -8 C 30 8 12 16 0 16 L 0 -100 C 16 -100 22 -84 20 -66 Z" fill="url(#rim)" opacity=".55"/>
+    <circle cx="-2" cy="-112" r="11" fill="#0d0208"/>
+    <path d="M-13 -114 C -8 -128 6 -130 12 -118 C 8 -110 -4 -108 -13 -114 Z" fill="#0d0208"/>
+    <path d="M-9 -113 C -4 -122 6 -122 10 -115 C 5 -110 -3 -109 -9 -113 Z" fill="#ff7a45" opacity=".35"/>
+  </g>
+
+  <!-- 地面光雾 -->
+  <ellipse cx="404" cy="330" rx="230" ry="26" fill="url(#mist)"/>
+  <ellipse cx="180" cy="344" rx="180" ry="18" fill="url(#mist)" opacity=".7"/>
+
+  <!-- 火星 -->
+  <g fill="#ffb270">
+    <circle cx="238" cy="248" r="1.7" opacity=".85"/>
+    <circle cx="268" cy="300" r="1.3" opacity=".6"/>
+    <circle cx="322" cy="214" r="1.9" opacity=".8"/>
+    <circle cx="352" cy="286" r="1.4" opacity=".55"/>
+    <circle cx="466" cy="248" r="1.8" opacity=".75"/>
+    <circle cx="498" cy="296" r="1.2" opacity=".5"/>
+    <circle cx="540" cy="240" r="1.6" opacity=".7"/>
+    <circle cx="576" cy="292" r="1.1" opacity=".45"/>
+    <circle cx="196" cy="196" r="1.5" opacity=".65"/>
+    <circle cx="128" cy="228" r="1.2" opacity=".5"/>
+    <circle cx="440" cy="150" r="1.4" opacity=".6"/>
+    <circle cx="392" cy="320" r="1.5" opacity=".55"/>
+    <circle cx="310" cy="326" r="1.2" opacity=".45"/>
+    <circle cx="74" cy="284" r="1.3" opacity=".5"/>
+    <circle cx="596" cy="180" r="1.2" opacity=".4"/>
+  </g>
+  <g fill="#ff5f3a" opacity=".5">
+    <circle cx="252" cy="272" r="1.1"/>
+    <circle cx="418" cy="238" r="1.2"/>
+    <circle cx="520" cy="266" r="1"/>
+    <circle cx="168" cy="256" r="1.1"/>
+  </g>
+
+  <rect width="616" height="353" fill="url(#vig)"/>
+</svg>

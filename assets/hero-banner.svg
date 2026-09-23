@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 620" width="1920" height="620" preserveAspectRatio="xMidYMid slice" role="img" aria-label="夜空下绽放的巨大红莲，悬崖上独立的人影，远处是层叠山峦与弥漫的火雾">
+  <defs>
+    <linearGradient id="hbSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#06030a"/>
+      <stop offset=".34" stop-color="#1d0716"/>
+      <stop offset=".62" stop-color="#4a0d18"/>
+      <stop offset=".82" stop-color="#2a0810"/>
+      <stop offset="1" stop-color="#0a0407"/>
+    </linearGradient>
+    <radialGradient id="hbHalo" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff0cf" stop-opacity=".95"/>
+      <stop offset=".18" stop-color="#ffc07a" stop-opacity=".72"/>
+      <stop offset=".42" stop-color="#ff6a3d" stop-opacity=".38"/>
+      <stop offset=".7" stop-color="#c81f2b" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#5c0a12" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hbPool" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffd7a0" stop-opacity=".5"/>
+      <stop offset=".5" stop-color="#ff7a45" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hbPetalOut" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#3a0510"/>
+      <stop offset=".45" stop-color="#a81223"/>
+      <stop offset="1" stop-color="#ff7a45"/>
+    </linearGradient>
+    <linearGradient id="hbPetalIn" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#6b0a16"/>
+      <stop offset=".5" stop-color="#e0332c"/>
+      <stop offset="1" stop-color="#ffc98a"/>
+    </linearGradient>
+    <linearGradient id="hbRim" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff7a45" stop-opacity=".95"/>
+      <stop offset=".55" stop-color="#8d1023" stop-opacity=".15"/>
+      <stop offset="1" stop-color="#8d1023" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hbGround" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#240910"/>
+      <stop offset=".45" stop-color="#12040a"/>
+      <stop offset="1" stop-color="#060204"/>
+    </linearGradient>
+    <linearGradient id="hbShaft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe6bd" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#ff7a45" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hbMist" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6a3d" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#ff9a6a" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hbLeftShade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#050206" stop-opacity=".94"/>
+      <stop offset=".42" stop-color="#07030a" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#0a0409" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hbBottomBlend" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2838" stop-opacity="0"/>
+      <stop offset=".72" stop-color="#1b2838" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#1b2838" stop-opacity=".92"/>
+    </linearGradient>
+    <radialGradient id="hbVig" cx=".52" cy=".46" r=".78">
+      <stop offset=".42" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity=".82"/>
+    </radialGradient>
+    <filter id="hbBlurXL" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="hbBlurL" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="hbBlurS" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <g id="hbPetal">
+      <path d="M0 0 C 33 -24 45 -72 12 -132 C 4 -146 -4 -146 -12 -132 C -45 -72 -33 -24 0 0 Z"/>
+    </g>
+  </defs>
+
+  <!-- 夜空 -->
+  <rect width="1920" height="620" fill="url(#hbSky)"/>
+  <g fill="#ffe9d2">
+    <circle cx="180" cy="70" r="1.5" opacity=".55"/>
+    <circle cx="332" cy="132" r="1.1" opacity=".4"/>
+    <circle cx="470" cy="58" r="1.3" opacity=".5"/>
+    <circle cx="612" cy="164" r="1" opacity=".35"/>
+    <circle cx="742" cy="96" r="1.6" opacity=".55"/>
+    <circle cx="890" cy="46" r="1.2" opacity=".45"/>
+    <circle cx="1034" cy="126" r="1.4" opacity=".5"/>
+    <circle cx="1180" cy="62" r="1.1" opacity=".4"/>
+    <circle cx="1306" cy="150" r="1.3" opacity=".42"/>
+    <circle cx="1444" cy="84" r="1.5" opacity=".5"/>
+    <circle cx="1586" cy="136" r="1.1" opacity=".36"/>
+    <circle cx="1720" cy="72" r="1.4" opacity=".48"/>
+    <circle cx="1836" cy="148" r="1.2" opacity=".4"/>
+    <circle cx="96" cy="188" r="1.1" opacity=".3"/>
+    <circle cx="1660" cy="196" r="1.2" opacity=".32"/>
+  </g>
+
+  <!-- 莲光 -->
+  <ellipse cx="1330" cy="300" rx="880" ry="440" fill="url(#hbHalo)" opacity=".9"/>
+
+  <!-- 天光柱 -->
+  <g opacity=".5" filter="url(#hbBlurL)">
+    <path d="M1150 0 L1330 0 L1560 470 L1180 470 Z" fill="url(#hbShaft)" opacity=".26"/>
+    <path d="M1310 0 L1392 0 L1480 470 L1230 470 Z" fill="url(#hbShaft)" opacity=".2"/>
+    <path d="M880 0 L958 0 L1060 300 L830 300 Z" fill="url(#hbShaft)" opacity=".12"/>
+  </g>
+
+  <!-- 远山 -->
+  <path d="M0 402 L118 344 L232 388 L346 330 L470 386 L586 336 L706 390 L828 342 L950 392 L1074 344 L1196 394 L1318 348 L1442 396 L1564 350 L1686 398 L1808 352 L1920 388 L1920 620 L0 620 Z" fill="#230912" opacity=".78"/>
+  <path d="M0 452 L142 408 L268 448 L398 400 L528 452 L664 406 L796 452 L930 402 L1062 454 L1198 408 L1330 456 L1466 410 L1600 456 L1736 412 L1872 452 L1920 436 L1920 620 L0 620 Z" fill="#150510" opacity=".9"/>
+
+  <!-- 地面 -->
+  <rect y="470" width="1920" height="150" fill="url(#hbGround)"/>
+  <ellipse cx="1330" cy="500" rx="560" ry="86" fill="url(#hbPool)"/>
+
+  <!-- 左侧崖壁与人影 -->
+  <g>
+    <path d="M-40 620 L 60 486 L 196 452 L 330 470 L 452 430 L 566 452 L 660 424 L 760 462 L 812 620 Z" fill="#0c0308"/>
+    <path d="M-40 620 L 120 520 L 300 520 L 470 494 L 640 520 L 812 620 Z" fill="#080205"/>
+    <g transform="translate(392 402)">
+      <g fill="#100308">
+        <path d="M-34 -186 C -18 -198 18 -198 34 -186 C 52 -168 62 -120 54 -66 C 46 -14 22 12 0 12 C -22 12 -46 -14 -54 -66 C -62 -120 -52 -168 -34 -186 Z"/>
+        <path d="M-34 -186 C -70 -160 -92 -104 -104 -46 C -76 -84 -52 -122 -36 -160 Z"/>
+        <path d="M-6 -196 C 14 -216 44 -220 66 -208 C 42 -200 20 -186 6 -166 Z"/>
+        <path d="M34 -186 C 52 -168 62 -120 54 -66 C 46 -14 22 12 0 12 L 0 -194 C 14 -194 26 -192 34 -186 Z"/>
+      </g>
+      <path d="M34 -186 C 52 -168 62 -120 54 -66 C 46 -14 22 12 0 12 L 0 -194 C 14 -194 26 -192 34 -186 Z" fill="url(#hbRim)" opacity=".5"/>
+      <circle cx="0" cy="-214" r="23" fill="#0d0208"/>
+      <path d="M-24 -220 C -16 -248 14 -254 32 -232 C 20 -224 -6 -218 -24 -220 Z" fill="#0d0208"/>
+      <path d="M-14 -218 C -4 -240 16 -242 28 -230 C 14 -222 -2 -217 -14 -218 Z" fill="#ff8a4a" opacity=".33"/>
+      <ellipse cx="4" cy="20" rx="66" ry="12" fill="#000" opacity=".5"/>
+    </g>
+  </g>
+
+  <!-- 巨大红莲 -->
+  <g transform="translate(1330 300)">
+    <g filter="url(#hbBlurXL)" opacity=".62">
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(-88) scale(1.62)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(88) scale(1.62)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(-62) scale(1.8)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(62) scale(1.8)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(-32) scale(1.94)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(32) scale(1.94)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="scale(2.04)"/>
+    </g>
+    <g opacity=".95">
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(-86) scale(1.46)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(86) scale(1.46)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(-60) scale(1.64)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(60) scale(1.64)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(-32) scale(1.78)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="rotate(32) scale(1.78)"/>
+      <use href="#hbPetal" fill="url(#hbPetalOut)" transform="scale(1.88)"/>
+    </g>
+    <g opacity=".92">
+      <use href="#hbPetal" fill="url(#hbPetalIn)" transform="rotate(-72) scale(.9)"/>
+      <use href="#hbPetal" fill="url(#hbPetalIn)" transform="rotate(72) scale(.9)"/>
+      <use href="#hbPetal" fill="url(#hbPetalIn)" transform="rotate(-44) scale(1)"/>
+      <use href="#hbPetal" fill="url(#hbPetalIn)" transform="rotate(44) scale(1)"/>
+      <use href="#hbPetal" fill="url(#hbPetalIn)" transform="rotate(-16) scale(1.06)"/>
+      <use href="#hbPetal" fill="url(#hbPetalIn)" transform="rotate(16) scale(1.06)"/>
+      <use href="#hbPetal" fill="url(#hbPetalIn)" transform="scale(1.1)"/>
+    </g>
+    <g opacity=".96">
+      <use href="#hbPetal" fill="#ffe3b0" transform="rotate(-26) scale(.4)"/>
+      <use href="#hbPetal" fill="#ffe3b0" transform="rotate(26) scale(.4)"/>
+      <use href="#hbPetal" fill="#fff3d4" transform="scale(.44)"/>
+    </g>
+    <ellipse rx="62" ry="42" fill="#ffeecb" opacity=".3" filter="url(#hbBlurS)"/>
+    <circle r="40" fill="#fff0cf" opacity=".9" filter="url(#hbBlurS)"/>
+    <circle r="26" fill="#fff2d6" opacity=".95"/>
+    <circle r="14" fill="#ffb35c"/>
+    <g fill="#ffe7bd" opacity=".5">
+      <circle cx="0" cy="18" r="2.6"/>
+      <circle cx="14" cy="11" r="2.1"/>
+      <circle cx="-14" cy="11" r="2.1"/>
+    </g>
+  </g>
+
+  <!-- 飘散花瓣与火星 -->
+  <g fill="#ff5f3a" opacity=".55">
+    <ellipse cx="1620" cy="180" rx="12" ry="5.6" transform="rotate(-26 1620 180)"/>
+    <ellipse cx="1082" cy="132" rx="10" ry="4.8" transform="rotate(22 1082 132)"/>
+    <ellipse cx="1712" cy="322" rx="9" ry="4.2" transform="rotate(52 1712 322)"/>
+    <ellipse cx="966" cy="228" rx="8.6" ry="4" transform="rotate(14 966 228)"/>
+    <ellipse cx="1236" cy="62" rx="7.4" ry="3.4" transform="rotate(-40 1236 62)"/>
+    <ellipse cx="1856" cy="236" rx="8" ry="3.8" transform="rotate(30 1856 236)"/>
+  </g>
+  <g fill="#ffb270">
+    <circle cx="612" cy="392" r="2.4" opacity=".7"/>
+    <circle cx="742" cy="466" r="1.9" opacity=".55"/>
+    <circle cx="946" cy="352" r="2.6" opacity=".68"/>
+    <circle cx="1052" cy="428" r="2" opacity=".5"/>
+    <circle cx="1148" cy="196" r="2.2" opacity=".6"/>
+    <circle cx="1272" cy="124" r="1.8" opacity=".45"/>
+    <circle cx="1424" cy="86" r="2.1" opacity=".5"/>
+    <circle cx="1566" cy="200" r="2.3" opacity=".6"/>
+    <circle cx="1698" cy="286" r="2" opacity=".5"/>
+    <circle cx="1806" cy="398" r="1.8" opacity=".42"/>
+    <circle cx="884" cy="248" r="2" opacity=".48"/>
+    <circle cx="1016" cy="510" r="2.2" opacity=".44"/>
+    <circle cx="1394" cy="536" r="2" opacity=".4"/>
+    <circle cx="368" cy="482" r="2.2" opacity=".5"/>
+    <circle cx="512" cy="536" r="1.8" opacity=".4"/>
+    <circle cx="1764" cy="120" r="1.7" opacity=".36"/>
+  </g>
+  <g fill="#ff5f3a" opacity=".5">
+    <circle cx="806" cy="418" r="1.7"/>
+    <circle cx="1198" cy="288" r="1.9"/>
+    <circle cx="1508" cy="470" r="1.6"/>
+    <circle cx="640" cy="300" r="1.6"/>
+  </g>
+
+  <!-- 地面雾 -->
+  <ellipse cx="1330" cy="536" rx="700" ry="42" fill="url(#hbMist)"/>
+  <ellipse cx="560" cy="574" rx="520" ry="30" fill="url(#hbMist)" opacity=".7"/>
+  <ellipse cx="1700" cy="586" rx="440" ry="26" fill="url(#hbMist)" opacity=".5"/>
+
+  <!-- 氛围叠加 -->
+  <rect width="1920" height="620" fill="url(#hbLeftShade)"/>
+  <rect width="1920" height="620" fill="url(#hbVig)"/>
+  <rect y="440" width="1920" height="180" fill="url(#hbBottomBlend)"/>
+</svg>
